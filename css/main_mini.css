@@ -1143,7 +1143,7 @@ textarea:focus,
 .menu-item-get-started span:before {
   content: '\e9a5'; }
 
-.menu-item-post-board span:before {
+.menu-item-bulletin-board span:before {
   content: '\e946'; }
 
 .menu-item-resources span:before {
@@ -1152,7 +1152,7 @@ textarea:focus,
 .menu-item-handbook span:before {
   content: '\e91f'; }
 
-.menu-item-contact span:before {
+.menu-item-contact-us span:before {
   content: '\e942'; }
 
 .menu-item-music span:before {
