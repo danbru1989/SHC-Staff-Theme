@@ -270,6 +270,14 @@
 		// remove_action( 'genesis_after_header', 'genesis_do_nav' );
 		// add_action( 'genesis_header', 'genesis_do_nav' );
 
+		// Add descriptive CSS classes to menu items
+		add_filter('nav_menu_css_class', 'bds_nav_classes', 10, 2);
+		function bds_nav_classes( $classes, $item ) {
+			$item_class = strtolower( preg_replace("/[\s_]/", "-", $item->title) );
+			$classes[] = 'menu-item-' . $item_class;
+			return $classes;
+		}
+
 	/* ===== Site Inner ===== */
 
 		// Add single post navigation.
