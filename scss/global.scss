@@ -397,9 +397,13 @@
 
       .breadcrumb {
         background: white;
-        padding: $whitespace-mobile;
-        margin-bottom: 1px;
-        @include mq($breakpoint-primary) {padding: $whitespace-mobile $whitespace-standard;}
+        font-size: 1.4rem;
+        .wrap {
+          margin: 0 auto 10px;
+          max-width: 1280px;
+          padding: 5px $whitespace-mobile;
+          @include mq($breakpoint-primary) {padding: 5px $whitespace-standard; margin: 0 auto;}
+        }
       }
 
     /* ===== Search Form ===== */

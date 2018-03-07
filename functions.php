@@ -22,6 +22,7 @@
 	– Site Footer
 – Other Stuff
 	– Image Sizes
+	– Breadcrumbs
 */
 
 
@@ -325,5 +326,29 @@
 		add_filter( 'genesis_comment_list_args', 'genesis_sample_comments_gravatar' );
 		function genesis_sample_comments_gravatar( $args ) {
 			$args['avatar_size'] = 60;
+			return $args;
+		}
+
+	/* ===== Breadcrumbs ===== */
+
+		// Move Breadcrumbs
+		remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+		add_action( 'genesis_after_header', 'genesis_do_breadcrumbs' );
+
+		// Change separator
+		add_filter('genesis_breadcrumb_args', 'bds_custom_breadcrumbs');
+		function bds_custom_breadcrumbs($args) {
+			$args['prefix'] = genesis_markup(array(
+					'open'    => '<div %s><div class="wrap">',
+					'context' => 'breadcrumb',
+					'echo'    => false,
+				));
+			$args['labels']['prefix'] = 'Browsing: ';
+			$args['sep'] = ' / ';
+			$args['suffix'] = genesis_markup(
+				array(
+					'open'    => '</div></div>',
+					'echo'    => false,
+				));
 			return $args;
 		}
