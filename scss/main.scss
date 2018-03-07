@@ -12,8 +12,11 @@
 // Add Mixins
 @import "mixins.scss";
 
+// Add Icon Font
+@import "icon-font.scss";
+
 // Add Form Styles
-@import "forms.scss";
+// @import "forms.scss";
 
 // Add Global Styles
 @import "global.scss";

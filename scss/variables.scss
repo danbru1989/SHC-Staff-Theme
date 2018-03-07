@@ -6,25 +6,27 @@
 
   // Descriptive Color Variables
 
-    $lightgrey  : rgb(240,240,240);
-    $grey       : rgb(220,220,220);
-    $blue       : rgb(60,150,210);
+    $lightgrey  : rgb(250,250,250);
+    $dark-green : rgb(94,143,127);
+    $brown      : rgb(141,120,94);
+    $light-tan  : rgb(250,242,235);
+    $tan        : rgb(230,230,210);
     $black      : rgb(50,50,50);
     $green      : rgb(100,200,0);
     $red        : rgb(200,50,0);
 
   // Functional Color Variables
 
-    $color-primary           : $blue;       // Primary bright color
-    $color-secondary         : $lightgrey;  // Secondary bright color
+    $color-primary           : $dark-green; // Primary bright color
+    $color-secondary         : $brown;      // Secondary bright color
     $color-tertiary          : $lightgrey;  // Primary light color
     $color-quaternary        : $black;      // Primary dark color
 
     $color-text-dark         : $black;
     $color-text-light        : $lightgrey;
 
-    $color-link-dark         : lighten($blue, 10%);
-    $color-link-dark-hover   : darken($blue,20%);
+    $color-link-dark         : lighten($dark-green, 10%);
+    $color-link-dark-hover   : darken($dark-green,20%);
 
     $color-link-light        : $lightgrey;
     $color-link-light-hover  : white;
