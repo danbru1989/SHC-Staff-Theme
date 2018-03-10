@@ -70,8 +70,12 @@
   @mixin site-navigation {
 
     .nav-primary {
+      position: relative;
       display: none;
       background: $nav-bg-color;
+      border-top: 2px solid darken($color-primary, 10%);
+      border-bottom: 2px solid darken($color-primary, 10%);
+      z-index: 10;
       @include mq($nav-breakpoint) {display: block;}
     }
 

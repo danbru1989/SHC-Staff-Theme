@@ -115,11 +115,17 @@
     .page .entry-title,
     .archive-title,
     .author-box-title {
+      color: $color-text-light;
+      display: inline-block;
+      background: $color-primary;
       font-size: 3rem;
-      border-bottom: 2px solid $color-primary;
-      line-height: 1;
-      padding-bottom: 5px;
-      margin-bottom: $whitespace-standard;
+      padding: 0 15px;
+      margin-top: -30px;
+      margin-left: -30px;
+      // border-bottom: 2px solid $color-primary;
+      // line-height: 1;
+      // padding-bottom: 5px;
+      // margin-bottom: $whitespace-standard;
       &:hover, &:focus {color: $color-text-dark;}
     }
 
@@ -402,6 +408,8 @@
       .breadcrumb {
         background: white;
         font-size: 1.4rem;
+        box-shadow: 0 0 5px $color-shadow;
+        z-index: 0;
         .wrap {
           margin: 0 auto 10px;
           max-width: 1280px;
