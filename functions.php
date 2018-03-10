@@ -23,6 +23,7 @@
 – Other Stuff
 	– Image Sizes
 	– Breadcrumbs
+	– Seach Bar
 */
 
 
@@ -338,6 +339,7 @@
 		// Change separator
 		add_filter('genesis_breadcrumb_args', 'bds_custom_breadcrumbs');
 		function bds_custom_breadcrumbs($args) {
+			$args['home'] = 'Get Started';
 			$args['prefix'] = genesis_markup(array(
 					'open'    => '<div %s><div class="wrap">',
 					'context' => 'breadcrumb',
@@ -351,4 +353,20 @@
 					'echo'    => false,
 				));
 			return $args;
+		}
+
+	/* ===== Search Bar ===== */
+
+		// Add search bar
+		add_action( 'genesis_before_content', 'bds_search_bar' );
+		function bds_search_bar() {
+			echo '<div class="search-wrapper">';
+			get_search_form();
+			echo '</div>';
+		}
+
+		// Change search bar text
+		add_filter( 'genesis_search_text', 'bds_search_text' );
+		function bds_search_text( $text ) {
+			return esc_attr( 'Search everything...' );
 		}

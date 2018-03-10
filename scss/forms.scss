@@ -60,7 +60,7 @@
 
   // Inputs
   $form-input-color                : $color-text-dark;
-  $form-input-background           : $color-secondary;
+  $form-input-background           : white;
   $form-input-padding              : 8px;
   $form-input-border               : 1px solid grey;
   $form-input-border-radius        : 0;
@@ -366,7 +366,7 @@
         }
       }
       .gf_step_active {font-weight: 700;}
-      .gf_step_pending {color: lighten($form-color, 50%);}
+      .gf_step_pending {color: gray;}
       @include mq($form-breakpoint) {
         display: flex;
         .gf_step {margin-right: $form-grid-gap;}

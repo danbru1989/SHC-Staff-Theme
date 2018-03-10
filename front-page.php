@@ -16,7 +16,7 @@ add_action( 'genesis_entry_content', 'bds_contact_page_content' );
 function bds_contact_page_content() {
   ?>
 
-	<div class="search-wrapper"><?php get_search_form(); ?></div>
+	
 
   <?php
 }

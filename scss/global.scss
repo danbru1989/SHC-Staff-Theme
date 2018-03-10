@@ -115,7 +115,11 @@
     .page .entry-title,
     .archive-title,
     .author-box-title {
-      font-size: 3.6rem;
+      font-size: 3rem;
+      border-bottom: 2px solid $color-primary;
+      line-height: 1;
+      padding-bottom: 5px;
+      margin-bottom: $whitespace-standard;
       &:hover, &:focus {color: $color-text-dark;}
     }
 
@@ -407,6 +411,39 @@
       }
 
     /* ===== Search Form ===== */
+
+      .search-wrapper {
+        .search-form {
+          position: relative;
+          font-size: 2.5rem;
+          padding-left: 50px;
+          margin: 0 auto;
+          max-width: 50%;
+          &:before { // add search icon
+            position: absolute;
+            color: darken($color-tertiary, 20%);
+            content: '\e986';
+            font-size: 4rem;
+            font-family: icomoon;
+            left: 0;
+          }
+          input[type="search"] {
+            color: darken($color-tertiary, 60%);
+            background: none;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-bottom: 2px solid darken($color-tertiary, 20%);
+            &:focus {border: none; border-bottom: 2px solid $color-primary;}
+            &::placeholder {
+              color: darken($color-tertiary, 30%);
+            }
+          }
+          input[type="submit"] {
+            display: none;
+          }
+        }
+      }
 
       .entry-content .search-form {
       	margin-bottom: 40px;

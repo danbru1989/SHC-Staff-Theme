@@ -431,8 +431,8 @@ template {
 /* ===== Individual Widgets ===== */
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?6nr1zu");
-  src: url("../fonts/icomoon.eot?6nr1zu#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?6nr1zu") format("truetype"), url("../fonts/icomoon.woff?6nr1zu") format("woff"), url("../fonts/icomoon.svg?6nr1zu#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?o7qgj");
+  src: url("../fonts/icomoon.eot?o7qgj#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?o7qgj") format("truetype"), url("../fonts/icomoon.woff?o7qgj") format("woff"), url("../fonts/icomoon.svg?o7qgj#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -503,6 +503,479 @@ template {
 .icon-file-pdf:before {
   content: "\eadf"; }
 
+/* ===== NOTES ===== */
+/**
+  *
+  * This Brubaker Design Services' CSS Grid conversion for Gravity Forms.
+  *
+  * BE SURE to disable Output CSS in Gravity Forms Settings.
+  *
+  */
+/* ===== TABLE OF CONTENTS =====
+- Variable Definitions
+– General Forms
+– Gravity Forms
+  – Form Header
+  – Form Body
+  – Form Footer
+  – CSS Ready Classes
+  – Specific Fields
+– Individual Forms
+*/
+/* ===== CSS Ready Classes =====
+– gf_span_2
+– gf_span_all
+– gf_list_columns
+– gf_scroll_text
+– gf_hide_ampm
+– gf_hide_charleft
+*/
+/* ========== DEFINE VARIABLES HERE ========== */
+/* ===== Specific Fields ===== */
+/* ========== General Forms ========== */
+input,
+select,
+textarea {
+  color: #323232;
+  background: white;
+  padding: 8px;
+  border: 1px solid grey;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 100%; }
+
+input:focus,
+textarea:focus {
+  border: 1px solid #5e8f7f;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none; }
+
+textarea {
+  max-height: 200px; }
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+  width: auto; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+  display: inline-block;
+  color: #fafafa;
+  background: #5e8f7f;
+  font-size: 2rem;
+  font-weight: normal;
+  padding: 10px 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: auto;
+  cursor: pointer;
+  white-space: normal;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  button:hover, button:focus,
+  input[type="button"]:hover,
+  input[type="button"]:focus,
+  input[type="reset"]:hover,
+  input[type="reset"]:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:focus,
+  .button:hover,
+  .button:focus {
+    color: #fafafa;
+    background: #79a798;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+.site-container button:disabled,
+.site-container button:disabled:hover,
+.site-container input:disabled,
+.site-container input:disabled:hover,
+.site-container input[type="button"]:disabled,
+.site-container input[type="button"]:disabled:hover,
+.site-container input[type="reset"]:disabled,
+.site-container input[type="reset"]:disabled:hover,
+.site-container input[type="submit"]:disabled,
+.site-container input[type="submit"]:disabled:hover {
+  cursor: not-allowed; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+  display: none; }
+
+/* ========== Gravity Forms ========== */
+.gform_wrapper {
+  color: inherit;
+  background: none;
+  font-size: 1.8rem;
+  padding: 0;
+  border: none;
+  border-radius: 0; }
+
+/* ===== Form Header ===== */
+.gform_heading {
+  text-align: left;
+  padding: 30px 0;
+  margin: 0;
+  border-bottom: none; }
+
+/* ===== Form Body ===== */
+.gform_body .gform_fields {
+  display: grid;
+  grid-gap: 30px;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  @media (min-width: 600px) {
+    .gform_body .gform_fields {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); } }
+
+.gfield {
+  margin-bottom: 0 !important; }
+  .gfield .gfield_label {
+    font-size: 1.1em;
+    font-weight: 600; }
+  .gfield .gfield_required {
+    color: #c83200;
+    padding-left: 3px; }
+  .gfield .ginput_container label {
+    color: inherit;
+    font-size: 0.8em; }
+  .gfield .gfield_description {
+    color: inherit;
+    font-size: 0.9em; }
+  .gfield.gform_hidden, .gfield.gfield_visibility_hidden {
+    display: none !important; }
+
+.field_description_above .gfield_description {
+  margin-bottom: 5px; }
+
+@media (min-width: 600px) {
+  .gform_fields.left_label {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-template-columns: auto; } }
+
+@media (min-width: 600px) {
+  .gform_fields.left_label .gfield {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 3fr;
+    max-width: 800px; } }
+
+@media (min-width: 600px) {
+  .gform_fields.right_label {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-template-columns: auto; } }
+
+@media (min-width: 600px) {
+  .gform_fields.right_label .gfield {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 3fr 1fr;
+    max-width: 800px; }
+    .gform_fields.right_label .gfield label {
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2;
+      text-align: right; } }
+
+/* ===== Form Footer ===== */
+.gform_footer,
+.gform_page_footer {
+  text-align: center;
+  padding: 30px 0;
+  margin: 0;
+  border-top: none; }
+  .gform_footer img,
+  .gform_page_footer img {
+    background: none !important;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
+
+/* ===== CSS Ready Classes ===== */
+@media (min-width: 600px) {
+  .gf_span_2 {
+    grid-column: span 2; } }
+
+.gf_span_all {
+  grid-column: 1 / -1; }
+
+.gf_list_columns ul {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+.gf_scroll_text .gsection_description {
+  height: 250px;
+  overflow-y: scroll; }
+
+.gf_hide_ampm .gfield_time_ampm {
+  display: none !important; }
+
+.gf_hide_charleft .charleft {
+  display: none !important; }
+
+/* ===== Specific Fields ===== */
+.gf_progressbar_wrapper {
+  padding-bottom: 0;
+  margin-bottom: 30px;
+  border-bottom: none; }
+  .gf_progressbar_wrapper .gf_progressbar_title {
+    font-size: .9em;
+    font-weight: normal;
+    margin-bottom: 5px; }
+  .gf_progressbar_wrapper .gf_progressbar {
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 25px;
+    -webkit-box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.05); }
+    .gf_progressbar_wrapper .gf_progressbar:after {
+      position: absolute;
+      display: block;
+      content: "";
+      background-color: rgba(0, 0, 0, 0.1);
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      top: 10px;
+      left: 10px;
+      -webkit-box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.05);
+      border-radius: 20px;
+      z-index: 990; }
+    .gf_progressbar_wrapper .gf_progressbar .gf_progressbar_percentage {
+      color: #fafafa;
+      background: -webkit-repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.1) 20px), -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.3)));
+      background: -o-repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.1) 20px), -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.3)));
+      background: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.1) 20px), -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.3)));
+      background: -webkit-repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.1) 20px), -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.3));
+      background: -o-repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.1) 20px), -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.3));
+      background: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.1) 20px), linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+      background-color: #5e8f7f;
+      font-size: 1em;
+      text-align: right;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      z-index: 999; }
+      .gf_progressbar_wrapper .gf_progressbar .gf_progressbar_percentage span {
+        padding: 0 5px; }
+
+.gf_page_steps {
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid inherit; }
+  .gf_page_steps .gf_step {
+    line-height: 2; }
+    .gf_page_steps .gf_step .gf_step_number {
+      font-size: 1.2em;
+      font-weight: 700;
+      padding-right: 5px; }
+  .gf_page_steps .gf_step_active {
+    font-weight: 700; }
+  .gf_page_steps .gf_step_pending {
+    color: gray; }
+  @media (min-width: 600px) {
+    .gf_page_steps {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .gf_page_steps .gf_step {
+        margin-right: 30px; }
+      .gf_page_steps .gf_step:last-of-type {
+        margin-right: 0; } }
+
+.gsection {
+  grid-column: 1 / -1; }
+  .gsection .gsection_title {
+    text-align: left;
+    margin-bottom: 15px;
+    border-bottom: 2px solid inherit; }
+
+.gform_validation_container {
+  display: none !important;
+  position: absolute !important;
+  left: -9000px; }
+
+@media (min-width: 600px) {
+  .ginput_container_name {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); } }
+
+@media (min-width: 600px) {
+  .ginput_container_address {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr); }
+    .ginput_container_address .address_line_1 {
+      grid-column: span 2; }
+    .ginput_container_address .address_line_2 {
+      grid-column: span 2; } }
+
+.clear-multi {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(3, 1fr); }
+
+.gfield_time_hour i {
+  display: none; }
+
+.ginput_container_list .gfield_list_container {
+  margin-bottom: 0; }
+
+select {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(#ebebeb), to(#cccccc));
+  background: -webkit-linear-gradient(white, #ebebeb, #cccccc);
+  background: -o-linear-gradient(white, #ebebeb, #cccccc);
+  background: linear-gradient(white, #ebebeb, #cccccc);
+  border: none; }
+
+.ginput_container_multiselect select {
+  background: white;
+  border: 1px solid grey;
+  border-radius: 0; }
+
+.ginput_container_radio .gfield_radio,
+.ginput_container_checkbox .gfield_checkbox {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .ginput_container_radio .gfield_radio li,
+  .ginput_container_checkbox .gfield_checkbox li {
+    margin-bottom: 0; }
+  .ginput_container_radio .gfield_radio label,
+  .ginput_container_checkbox .gfield_checkbox label {
+    color: inherit;
+    font-size: 1em;
+    margin-left: 10px; }
+
+.gform_drop_area {
+  padding: 30px;
+  text-align: center;
+  border: 2px dashed #c7c7c7; }
+  .gform_drop_area .button {
+    font-size: 1.8rem; }
+
+.ginput_container .wp-editor-container {
+  border: 1px solid grey; }
+  .ginput_container .wp-editor-container button:hover {
+    background: none; }
+
+.gform_confirmation_wrapper {
+  text-align: center;
+  margin: 30px 0; }
+
+.validation_error {
+  color: #c83200;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-top: 2px solid #c83200;
+  border-bottom: 2px solid #c83200;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center; }
+
+.gfield_error input {
+  background: rgba(200, 50, 0, 0.25);
+  border-color: #c83200; }
+
+.gfield_error .validation_message {
+  color: #c83200;
+  font-size: .8em;
+  font-weight: bold;
+  text-align: center; }
+
+#ui-datepicker-div {
+  display: none;
+  background: #8d785e;
+  width: 250px;
+  padding: 5px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); }
+  #ui-datepicker-div .ui-datepicker-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 10px 0; }
+  #ui-datepicker-div .ui-datepicker-prev {
+    cursor: pointer;
+    width: 10%;
+    text-align: center; }
+    #ui-datepicker-div .ui-datepicker-prev .ui-icon {
+      font-size: 0; }
+    #ui-datepicker-div .ui-datepicker-prev .ui-icon:before {
+      font-size: 2.5rem;
+      font-family: 'dashicons';
+      content: '\f341'; }
+    #ui-datepicker-div .ui-datepicker-prev.ui-state-disabled {
+      display: none; }
+  #ui-datepicker-div .ui-datepicker-next {
+    cursor: pointer;
+    width: 10%;
+    text-align: center;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2; }
+    #ui-datepicker-div .ui-datepicker-next .ui-icon {
+      font-size: 0; }
+    #ui-datepicker-div .ui-datepicker-next .ui-icon:before {
+      font-size: 2.5rem;
+      font-family: 'dashicons';
+      content: '\f345'; }
+    #ui-datepicker-div .ui-datepicker-next.ui-state-disabled {
+      display: none; }
+  #ui-datepicker-div .ui-datepicker-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%; }
+    #ui-datepicker-div .ui-datepicker-title .ui-datepicker-month {
+      margin-right: 5px; }
+  #ui-datepicker-div table {
+    width: 100%;
+    margin-bottom: 0; }
+  #ui-datepicker-div thead {
+    border-bottom: 2px solid #fafafa; }
+  #ui-datepicker-div thead th {
+    text-align: center; }
+  #ui-datepicker-div td {
+    padding: 0; }
+    #ui-datepicker-div td a {
+      display: block;
+      text-align: center;
+      border-radius: 3px; }
+      #ui-datepicker-div td a:hover {
+        color: #8d785e;
+        background: #5e8f7f; }
+  #ui-datepicker-div .ui-datepicker-today a {
+    color: #323232;
+    background: white; }
+
+/* ========== Individual Forms ========== */
 /* ========== PLACE GLOBAL STYLES HERE ========== */
 /* ===== TABLE OF CONTENTS =====
 – Default Elements & Styles
@@ -614,7 +1087,11 @@ h6 {
 .page .entry-title,
 .archive-title,
 .author-box-title {
-  font-size: 3.6rem; }
+  font-size: 3rem;
+  border-bottom: 2px solid #5e8f7f;
+  line-height: 1;
+  padding-bottom: 5px;
+  margin-bottom: 30px; }
   .page .entry-title:hover, .page .entry-title:focus,
   .archive-title:hover,
   .archive-title:focus,
@@ -902,6 +1379,40 @@ textarea:focus,
         margin: 0 auto; } }
 
 /* ===== Search Form ===== */
+.search-wrapper .search-form {
+  position: relative;
+  font-size: 2.5rem;
+  padding-left: 50px;
+  margin: 0 auto;
+  max-width: 50%; }
+  .search-wrapper .search-form:before {
+    position: absolute;
+    color: #c7c7c7;
+    content: '\e986';
+    font-size: 4rem;
+    font-family: icomoon;
+    left: 0; }
+  .search-wrapper .search-form input[type="search"] {
+    color: #616161;
+    background: none;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-bottom: 2px solid #c7c7c7; }
+    .search-wrapper .search-form input[type="search"]:focus {
+      border: none;
+      border-bottom: 2px solid #5e8f7f; }
+    .search-wrapper .search-form input[type="search"]::-webkit-input-placeholder {
+      color: #aeaeae; }
+    .search-wrapper .search-form input[type="search"]:-ms-input-placeholder {
+      color: #aeaeae; }
+    .search-wrapper .search-form input[type="search"]::-ms-input-placeholder {
+      color: #aeaeae; }
+    .search-wrapper .search-form input[type="search"]::placeholder {
+      color: #aeaeae; }
+  .search-wrapper .search-form input[type="submit"] {
+    display: none; }
+
 .entry-content .search-form {
   margin-bottom: 40px;
   width: 50%; }
