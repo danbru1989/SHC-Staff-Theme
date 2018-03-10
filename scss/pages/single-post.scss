@@ -1,0 +1,21 @@
+/* ========== ADD STYLES HERE ========== */
+
+.single {
+  .content {
+    border: 2px solid darken($color-tertiary, 10%);
+  }
+
+  .entry-header {
+    text-align: center;
+    .entry-title {
+      display: inline-block;
+      padding: 0 $whitespace-standard;
+      border-bottom: 2px solid $color-primary;
+    }
+    .entry-meta {
+      font-size: 1.2rem;
+      border-top: none;
+      line-height: 2;
+    }
+  }
+}

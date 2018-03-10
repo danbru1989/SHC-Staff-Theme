@@ -22,6 +22,7 @@
 	– Site Footer
 – Other Stuff
 	– Image Sizes
+	– Page Titles
 	– Breadcrumbs
 	– Seach Bar
 */
@@ -286,6 +287,21 @@
 		add_action( 'genesis_after_entry', 'genesis_prev_next_post_nav' );
 		add_action( 'genesis_after_loop', 'genesis_adjacent_entry_nav' );
 
+		// Add "Last updated on" to posts
+		add_filter( 'genesis_post_info', "bds_post_info" );
+		function bds_post_info( $post_info ) {
+			if ( is_home() || is_singular( 'post' ) ) {
+				$post_info = '[post_date format="F j, Y" label="Posted on "] by [post_author] [post_comments] [post_edit link="Edit Post" before=" – "]';
+				return $post_info;
+			} else {
+				$post_info = '[post_modified_date format="F j, Y" label="Last updated on "] by [post_author] [post_comments] [post_edit link="Edit Record" before=" – "]';
+				return $post_info;
+			}
+		}
+
+		// Remove author boxes
+		remove_action( 'genesis_after_entry', 'genesis_do_author_box_single', 8 );
+
 		// Add support for after entry widget.
 		// add_theme_support( 'genesis-after-entry-widget-area' );
 
@@ -330,6 +346,32 @@
 			return $args;
 		}
 
+	/* ===== Page Titles ===== */
+
+		add_action( 'genesis_header', 'bds_page_titles', 15 );
+		function bds_page_titles() {
+			if ( is_page() ) {
+				remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+				remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+				remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+				add_action( 'genesis_before_content', 'genesis_entry_header_markup_open', 5 );
+				add_action( 'genesis_before_content', 'genesis_do_post_title', 15 );
+				add_action( 'genesis_before_content', 'genesis_entry_header_markup_close', 15 );
+			}
+
+			// Move blog title
+			add_action( 'genesis_before_content', 'genesis_do_posts_page_heading' );
+			remove_action( 'genesis_before_loop', 'genesis_do_posts_page_heading' );
+
+			// Move CPT archive titles
+			add_action( 'genesis_before_content', 'genesis_do_cpt_archive_title_description' );
+			remove_action( 'genesis_before_loop', 'genesis_do_cpt_archive_title_description' );
+
+			// add_action( 'genesis_before_content', 'genesis_do_taxonomy_title_description', 15 );
+			// remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
+
+		}
+
 	/* ===== Breadcrumbs ===== */
 
 		// Move Breadcrumbs
@@ -358,7 +400,7 @@
 	/* ===== Search Bar ===== */
 
 		// Add search bar
-		add_action( 'genesis_before_content', 'bds_search_bar' );
+		add_action( 'genesis_before_content', 'bds_search_bar', 1 );
 		function bds_search_bar() {
 			echo '<div class="search-wrapper">';
 			get_search_form();

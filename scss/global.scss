@@ -112,21 +112,22 @@
 
   /* ===== Titles ===== */
 
+    .page .entry-header,
+    .archive-description {
+      text-align: right;
+      margin-bottom: -30px;
+      border-bottom: 5px solid $color-primary;
+    }
+
     .page .entry-title,
-    .archive-title,
-    .author-box-title {
+    .archive-title {
+      position: relative;
       color: $color-text-light;
       display: inline-block;
       background: $color-primary;
-      font-size: 3rem;
-      padding: 0 15px;
-      margin-top: -30px;
-      margin-left: -30px;
-      // border-bottom: 2px solid $color-primary;
-      // line-height: 1;
-      // padding-bottom: 5px;
-      // margin-bottom: $whitespace-standard;
-      &:hover, &:focus {color: $color-text-dark;}
+      font-size: 2.5rem;
+      padding: 5px 15px;
+      border-radius: 15px 15px 0 0;
     }
 
     .entry-title a,
@@ -369,8 +370,7 @@
 
   /* ===== Genesis Elements ===== */
 
-    .after-entry,
-    .archive-description,
+    .after-entry
     .author-box {
       background-color: white;
       padding: $whitespace-mobile;
@@ -597,6 +597,13 @@
 
     /* ===== Content Area ===== */
 
+      .content {
+        background: white;
+        border-left: 2px solid darken($color-tertiary, 10%);
+        border-right: 2px solid darken($color-tertiary, 10%);
+        border-bottom: 2px solid darken($color-tertiary, 10%);
+      }
+
       .content > * {
         margin-bottom: $whitespace-mobile;
         @include mq($breakpoint-primary) {margin-bottom: $whitespace-standard;}
@@ -604,7 +611,6 @@
       }
 
       .entry {
-        background: white;
         @include standard-padding;
       }
 

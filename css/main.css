@@ -1082,22 +1082,21 @@ h6 {
   font-size: 1.6rem; }
 
 /* ===== Titles ===== */
+.page .entry-header,
+.archive-description {
+  text-align: right;
+  margin-bottom: -30px;
+  border-bottom: 5px solid #5e8f7f; }
+
 .page .entry-title,
-.archive-title,
-.author-box-title {
+.archive-title {
+  position: relative;
   color: #fafafa;
   display: inline-block;
   background: #5e8f7f;
-  font-size: 3rem;
-  padding: 0 15px;
-  margin-top: -30px;
-  margin-left: -30px; }
-  .page .entry-title:hover, .page .entry-title:focus,
-  .archive-title:hover,
-  .archive-title:focus,
-  .author-box-title:hover,
-  .author-box-title:focus {
-    color: #323232; }
+  font-size: 2.5rem;
+  padding: 5px 15px;
+  border-radius: 15px 15px 0 0; }
 
 .entry-title a,
 .archive-description .entry-title a {
@@ -1321,16 +1320,14 @@ textarea:focus,
   transition: all .2s ease-in-out; }
 
 /* ===== Genesis Elements ===== */
-.after-entry,
-.archive-description,
+.after-entry
 .author-box {
   background-color: white;
   padding: 15px;
   margin-bottom: 15px; }
   @media (min-width: 600px) {
-    .after-entry,
-    .archive-description,
-    .author-box {
+    .after-entry
+.author-box {
       padding: 30px;
       margin-bottom: 30px; } }
 
@@ -1781,6 +1778,12 @@ textarea:focus,
   max-width: 800px; }
 
 /* ===== Content Area ===== */
+.content {
+  background: white;
+  border-left: 2px solid #e1e1e1;
+  border-right: 2px solid #e1e1e1;
+  border-bottom: 2px solid #e1e1e1; }
+
 .content > * {
   margin-bottom: 15px; }
   @media (min-width: 600px) {
@@ -1790,7 +1793,6 @@ textarea:focus,
     margin-bottom: 0; }
 
 .entry {
-  background: white;
   padding: 20px; }
   @media (min-width: 600px) {
     .entry {
@@ -1956,3 +1958,17 @@ textarea:focus,
 /* ========== ADD STYLES HERE ========== */
 /* ========== ADD STYLES HERE ========== */
 /* ========== ADD STYLES HERE ========== */
+/* ========== ADD STYLES HERE ========== */
+.single .content {
+  border: 2px solid #e1e1e1; }
+
+.single .entry-header {
+  text-align: center; }
+  .single .entry-header .entry-title {
+    display: inline-block;
+    padding: 0 30px;
+    border-bottom: 2px solid #5e8f7f; }
+  .single .entry-header .entry-meta {
+    font-size: 1.2rem;
+    border-top: none;
+    line-height: 2; }
