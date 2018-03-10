@@ -25,8 +25,8 @@
     $color-text-dark         : $black;
     $color-text-light        : $lightgrey;
 
-    $color-link-dark         : lighten($dark-green, 10%);
-    $color-link-dark-hover   : darken($dark-green,20%);
+    $color-link-dark         : lighten($dark-green, 5%);
+    $color-link-dark-hover   : lighten($dark-green, 20%);
 
     $color-link-light        : $lightgrey;
     $color-link-light-hover  : white;

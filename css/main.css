@@ -1050,10 +1050,10 @@ body > div {
 
 /* ===== Links ===== */
 a {
-  color: #79a798;
+  color: #6a9d8c;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #fafafa;
+    color: #98bbb0;
     text-decoration: none; }
 
 /* ===== Headings ===== */
@@ -1105,7 +1105,7 @@ h6 {
   .entry-title a:hover, .entry-title a:focus,
   .archive-description .entry-title a:hover,
   .archive-description .entry-title a:focus {
-    color: #79a798; }
+    color: #6a9d8c; }
 
 .sidebar .widget-title a {
   color: #323232; }
@@ -1965,9 +1965,10 @@ textarea:focus,
 .single .entry-header {
   text-align: center; }
   .single .entry-header .entry-title {
-    display: inline-block;
     padding: 0 30px;
-    border-bottom: 2px solid #5e8f7f; }
+    margin: 0 auto;
+    max-width: 800px;
+    border-bottom: 5px solid #5e8f7f; }
   .single .entry-header .entry-meta {
     font-size: 1.2rem;
     border-top: none;
