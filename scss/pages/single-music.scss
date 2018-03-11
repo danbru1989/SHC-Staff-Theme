@@ -3,27 +3,6 @@
 .single-music {
 
   .music-details {
-    display: none;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    @include mq($breakpoint-primary) {flex-direction: row;}
-    .music-detail {
-      text-align: center;
-      margin: $whitespace-mobile auto;
-      @include mq($breakpoint-primary) {margin: $whitespace-mobile $whitespace-mobile;}
-      .name-title {
-        display: block;
-        font-size: 2rem;
-        font-weight: 700;
-        padding: 0 $whitespace-mobile;
-        border-bottom: 2px solid $color-secondary;
-      }
-      .name {padding: 0 $whitespace-mobile;}
-    }
-  }
-
-  .music-details-new {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

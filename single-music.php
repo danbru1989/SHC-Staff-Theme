@@ -10,22 +10,6 @@ function bds_single_music_content() {
 	if ( $music_details ) {
 		echo '<div class="music-details">';
 		if ( $music_details['author'] ) {
-			echo '<div class="music-detail author"><span class="name-title">Author</span><span class="name">' . $music_details['author'] . '</span></div>';
-		}
-		if ( $music_details['composer'] ) {
-			echo '<div class="music-detail composer"><span class="name-title">Composer</span><span class="name">' . $music_details['composer'] . '</span></div>';
-		}
-		if ( $music_details['arranger'] ) {
-			echo '<div class="music-detail arranger"><span class="name-title">Arranged by</span><span class="name">' . $music_details['arranger'] . '</span></div>';
-		}
-		echo '</div>';
-	}
-
-	// Music Details
-	$music_details = get_field('music_details');
-	if ( $music_details ) {
-		echo '<div class="music-details-new">';
-		if ( $music_details['author'] ) {
 			echo '<span class="music-detail author"><span class="name-title">Authored by: </span><span class="name">' . $music_details['author'] . '</span></span>';
 		}
 		if ( $music_details['composer'] ) {

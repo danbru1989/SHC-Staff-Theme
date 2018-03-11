@@ -2024,38 +2024,6 @@ textarea:focus,
 
 /* ========== ADD STYLES HERE ========== */
 .single-music .music-details {
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-  @media (min-width: 600px) {
-    .single-music .music-details {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row; } }
-  .single-music .music-details .music-detail {
-    text-align: center;
-    margin: 15px auto; }
-    @media (min-width: 600px) {
-      .single-music .music-details .music-detail {
-        margin: 15px 15px; } }
-    .single-music .music-details .music-detail .name-title {
-      display: block;
-      font-size: 2rem;
-      font-weight: 700;
-      padding: 0 15px;
-      border-bottom: 2px solid #8d785e; }
-    .single-music .music-details .music-detail .name {
-      padding: 0 15px; }
-
-.single-music .music-details-new {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2076,11 +2044,11 @@ textarea:focus,
   padding: 5px 15px;
   margin: 0 -20px; }
   @media (min-width: 600px) {
-    .single-music .music-details-new {
+    .single-music .music-details {
       margin: 0 -30px; } }
-  .single-music .music-details-new .music-detail {
+  .single-music .music-details .music-detail {
     padding: 0 5px; }
-    .single-music .music-details-new .music-detail .name-title {
+    .single-music .music-details .music-detail .name-title {
       font-weight: 700; }
 
 .single-music .instructions-wrapper {
