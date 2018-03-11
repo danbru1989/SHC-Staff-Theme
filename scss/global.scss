@@ -302,12 +302,13 @@
     // Audio player
     .wp-audio-shortcode {
       border-radius: 0;
+      width: 100% !important;
       .mejs-controls {
         background: $color-primary !important;
         border-radius: 0;
         .mejs-time-rail {
           .mejs-time-loaded {background: $color-tertiary;}
-          .mejs-time-current {background: $color-secondary;}
+          .mejs-time-current {background: lighten($color-secondary,30%);}
         }
       }
       button {transition: none;}
@@ -423,25 +424,29 @@
       .search-wrapper {
         .search-form {
           position: relative;
-          font-size: 2.5rem;
-          padding-left: 50px;
-          margin: 0 auto;
-          max-width: 50%;
+          font-size: 2rem;
+          padding-left: 40px;
+          margin: $whitespace-mobile;
+          max-width: 600px;
+          @include mq($breakpoint-primary) {font-size: 2.5rem; padding-left: 50px; margin: 0 auto $whitespace-mobile;}
+          @include mq($breakpoint-secondary) {margin: $whitespace-mobile auto $whitespace-standard;}
           &:before { // add search icon
             position: absolute;
             color: darken($color-tertiary, 20%);
             content: '\e986';
-            font-size: 4rem;
+            font-size: 3rem;
             font-family: icomoon;
             left: 0;
+            @include mq($breakpoint-primary) {font-size: 4rem;}
           }
           input[type="search"] {
             color: darken($color-tertiary, 60%);
             background: none;
             width: 100%;
-            padding: 15px;
+            padding: 10px;
             border: none;
             border-bottom: 2px solid darken($color-tertiary, 20%);
+            @include mq($breakpoint-primary) {padding: 15px;}
             &:focus {border: none; border-bottom: 2px solid $color-primary;}
             &::placeholder {
               color: darken($color-tertiary, 30%);
@@ -599,9 +604,11 @@
 
       .content {
         background: white;
-        border-left: 2px solid darken($color-tertiary, 10%);
-        border-right: 2px solid darken($color-tertiary, 10%);
         border-bottom: 2px solid darken($color-tertiary, 10%);
+        @include mq($breakpoint-primary) {
+          border-left: 2px solid darken($color-tertiary, 10%);
+          border-right: 2px solid darken($color-tertiary, 10%);
+        }
       }
 
       .content > * {

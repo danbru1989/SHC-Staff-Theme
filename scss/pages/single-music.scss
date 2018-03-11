@@ -1,0 +1,118 @@
+/* ========== ADD STYLES HERE ========== */
+
+.single-music {
+
+  .music-details {
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include mq($breakpoint-primary) {flex-direction: row;}
+    .music-detail {
+      text-align: center;
+      margin: $whitespace-mobile auto;
+      @include mq($breakpoint-primary) {margin: $whitespace-mobile $whitespace-mobile;}
+      .name-title {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 0 $whitespace-mobile;
+        border-bottom: 2px solid $color-secondary;
+      }
+      .name {padding: 0 $whitespace-mobile;}
+    }
+  }
+
+  .music-details-new {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $color-text-light;
+    background: $color-secondary;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px $whitespace-mobile;
+    margin: 0 -20px;
+    @include mq($breakpoint-primary) {margin: 0 -30px;}
+    .music-detail {
+      padding: 0 5px;
+      .name-title {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .instructions-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-text-light;
+    background: $color-primary;
+    @include standard-padding;
+    margin: 0 -20px $whitespace-standard;
+    border-bottom: 10px solid $color-secondary;
+    @include mq($breakpoint-primary) {flex-direction: row; margin: 0 -30px $whitespace-standard;}
+    .instructions {
+      flex: 1;
+      font-weight: 600;
+      margin-bottom: $whitespace-standard;
+      border-bottom: 2px dashed $color-tertiary;
+      @include mq($breakpoint-primary) {margin: 0; border-bottom: none;}
+    }
+    .sheet-music {
+      flex: 1;
+      align-self: stretch;
+      @include mq($breakpoint-primary) {
+        padding-left: $whitespace-standard;
+        margin-left: $whitespace-standard;
+        border-left: 2px dashed $color-tertiary;
+      }
+      h2 {text-align: center;}
+      .link-wrapper {
+        text-align: center;
+        a {
+          display: inline-block;
+          color: $color-link-light;
+          font-weight: 700;
+          padding: $whitespace-standard;
+          &:hover, &:focus {transform: scale(1.2);}
+          span {
+            display: block;
+            font-size: 5em;
+          }
+        }
+      }
+      .copyright {
+        background: lighten($color-primary,10%);
+        font-size: .9em;
+        font-weight: 600;
+        line-height: 1.2;
+        padding: 5px $whitespace-mobile $whitespace-mobile;
+        border-radius: 10px;
+        p {margin-bottom: 0;}
+      }
+    }
+  }
+
+  .audio-recordings-wrapper {
+    margin: 0 auto 50px;
+    max-width: 600px;
+    h2 {
+      border-bottom: 2px solid $color-primary;
+    }
+    .audio-recordings-list {
+      list-style: none;
+      padding: 0;
+      li {
+        padding: 0 $whitespace-mobile $whitespace-mobile;
+        margin-bottom: $whitespace-mobile;
+        border-bottom: 2px solid darken($color-tertiary,10%);
+        &:last-of-type {border-bottom: none;}
+      }
+      .wp-audio-shortcode {margin: 0 0 5px;}
+      .download-link span {padding: 0 5px;}
+    }
+  }
+}

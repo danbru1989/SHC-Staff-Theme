@@ -36,20 +36,24 @@
 
     @mixin title-description {
       .site-title {
-        font-size: 4rem;
+        font-size: 2.5rem;
         font-weight: 700;
         line-height: 1.5;
         text-align: center;
         margin-bottom: 0;
+        @include mq(ms) {font-size: 3rem;}
+        @include mq($breakpoint-primary) {font-size: 4rem;}
         a, & a:hover, & a:focus {
           color: $color-text-dark;
         }
       }
 
       .site-description {
-        font-size: 3rem;
+        font-size: 2rem;
         text-align: center;
         margin-bottom: 0;
+        @include mq(ms) {font-size: 2.5rem;}
+        @include mq($breakpoint-primary) {font-size: 3.5rem;}
       }
     }
 
@@ -73,10 +77,9 @@
       position: relative;
       display: none;
       background: $nav-bg-color;
-      border-top: 2px solid darken($color-primary, 10%);
-      border-bottom: 2px solid darken($color-primary, 10%);
+      border-bottom: 3px solid darken($color-primary, 10%);
       z-index: 10;
-      @include mq($nav-breakpoint) {display: block;}
+      @include mq($nav-breakpoint) {display: block; border-top: 3px solid darken($color-primary, 10%);}
     }
 
     .genesis-nav-menu {
@@ -216,6 +219,12 @@
       font-size: 2rem;
       font-weight: 600;
       padding: $nav-item-padding - 5 $nav-item-padding;
+      border-top: 3px solid darken($color-primary, 10%);
+      border-bottom: 3px solid darken($color-primary, 10%);
+      &:hover, &:focus {
+        border-top: 3px solid darken($color-primary, 10%);
+        border-bottom: 3px solid darken($color-primary, 10%);
+      }
       z-index: 1000;
       &:before {
         font-size: 1.5em;

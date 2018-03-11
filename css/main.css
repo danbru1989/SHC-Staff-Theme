@@ -1263,14 +1263,15 @@ a.aligncenter img, a.alignnone {
 
 /* ===== Embedded Items ===== */
 .wp-audio-shortcode {
-  border-radius: 0; }
+  border-radius: 0;
+  width: 100% !important; }
   .wp-audio-shortcode .mejs-controls {
     background: #5e8f7f !important;
     border-radius: 0; }
     .wp-audio-shortcode .mejs-controls .mejs-time-rail .mejs-time-loaded {
       background: #fafafa; }
     .wp-audio-shortcode .mejs-controls .mejs-time-rail .mejs-time-current {
-      background: #8d785e; }
+      background: #cec3b6; }
   .wp-audio-shortcode button {
     -webkit-transition: none;
     -o-transition: none;
@@ -1381,24 +1382,38 @@ textarea:focus,
 /* ===== Search Form ===== */
 .search-wrapper .search-form {
   position: relative;
-  font-size: 2.5rem;
-  padding-left: 50px;
-  margin: 0 auto;
-  max-width: 50%; }
+  font-size: 2rem;
+  padding-left: 40px;
+  margin: 15px;
+  max-width: 600px; }
+  @media (min-width: 600px) {
+    .search-wrapper .search-form {
+      font-size: 2.5rem;
+      padding-left: 50px;
+      margin: 0 auto 15px; } }
+  @media (min-width: 768px) {
+    .search-wrapper .search-form {
+      margin: 15px auto 30px; } }
   .search-wrapper .search-form:before {
     position: absolute;
     color: #c7c7c7;
     content: '\e986';
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: icomoon;
     left: 0; }
+    @media (min-width: 600px) {
+      .search-wrapper .search-form:before {
+        font-size: 4rem; } }
   .search-wrapper .search-form input[type="search"] {
     color: #616161;
     background: none;
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     border: none;
     border-bottom: 2px solid #c7c7c7; }
+    @media (min-width: 600px) {
+      .search-wrapper .search-form input[type="search"] {
+        padding: 15px; } }
     .search-wrapper .search-form input[type="search"]:focus {
       border: none;
       border-bottom: 2px solid #5e8f7f; }
@@ -1522,30 +1537,42 @@ textarea:focus,
 
 /* ===== Title Area ===== */
 .site-title {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
   margin-bottom: 0; }
+  @media (min-width: 480px) {
+    .site-title {
+      font-size: 3rem; } }
+  @media (min-width: 600px) {
+    .site-title {
+      font-size: 4rem; } }
   .site-title a, .site-title a:hover, .site-title a:focus {
     color: #323232; }
 
 .site-description {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 0; }
+  @media (min-width: 480px) {
+    .site-description {
+      font-size: 2.5rem; } }
+  @media (min-width: 600px) {
+    .site-description {
+      font-size: 3.5rem; } }
 
 /* ===== Site Navigation ===== */
 .nav-primary {
   position: relative;
   display: none;
   background: #5e8f7f;
-  border-top: 2px solid #4a7064;
-  border-bottom: 2px solid #4a7064;
+  border-bottom: 3px solid #4a7064;
   z-index: 10; }
   @media (min-width: 600px) {
     .nav-primary {
-      display: block; } }
+      display: block;
+      border-top: 3px solid #4a7064; } }
 
 .genesis-nav-menu {
   display: -webkit-box;
@@ -1708,7 +1735,12 @@ textarea:focus,
   font-size: 2rem;
   font-weight: 600;
   padding: 15px 20px;
+  border-top: 3px solid #4a7064;
+  border-bottom: 3px solid #4a7064;
   z-index: 1000; }
+  .menu-toggle:hover, .menu-toggle:focus {
+    border-top: 3px solid #4a7064;
+    border-bottom: 3px solid #4a7064; }
   .menu-toggle:before {
     font-size: 1.5em;
     margin-right: 5px;
@@ -1780,9 +1812,11 @@ textarea:focus,
 /* ===== Content Area ===== */
 .content {
   background: white;
-  border-left: 2px solid #e1e1e1;
-  border-right: 2px solid #e1e1e1;
   border-bottom: 2px solid #e1e1e1; }
+  @media (min-width: 600px) {
+    .content {
+      border-left: 2px solid #e1e1e1;
+      border-right: 2px solid #e1e1e1; } }
 
 .content > * {
   margin-bottom: 15px; }
@@ -1960,16 +1994,182 @@ textarea:focus,
 /* ========== ADD STYLES HERE ========== */
 /* ========== ADD STYLES HERE ========== */
 .single .content {
-  border: 2px solid #e1e1e1; }
+  border-top: 2px solid #e1e1e1;
+  border-bottom: 2px solid #e1e1e1; }
+  @media (min-width: 600px) {
+    .single .content {
+      border: 2px solid #e1e1e1; } }
 
 .single .entry-header {
   text-align: center; }
   .single .entry-header .entry-title {
+    font-size: 2.5rem;
     padding: 0 30px;
-    margin: 0 auto;
+    margin: 0 auto 5px;
     max-width: 800px;
-    border-bottom: 5px solid #5e8f7f; }
+    line-height: 1.2;
+    border-bottom: 3px solid #5e8f7f; }
+    @media (min-width: 600px) {
+      .single .entry-header .entry-title {
+        font-size: 3.5rem; } }
+    @media (min-width: 768px) {
+      .single .entry-header .entry-title {
+        font-size: 4rem; } }
   .single .entry-header .entry-meta {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     border-top: none;
-    line-height: 2; }
+    line-height: 1.35; }
+
+/* ========== ADD STYLES HERE ========== */
+.single-music .music-details {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  @media (min-width: 600px) {
+    .single-music .music-details {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
+  .single-music .music-details .music-detail {
+    text-align: center;
+    margin: 15px auto; }
+    @media (min-width: 600px) {
+      .single-music .music-details .music-detail {
+        margin: 15px 15px; } }
+    .single-music .music-details .music-detail .name-title {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 0 15px;
+      border-bottom: 2px solid #8d785e; }
+    .single-music .music-details .music-detail .name {
+      padding: 0 15px; }
+
+.single-music .music-details-new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #fafafa;
+  background: #8d785e;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 5px 15px;
+  margin: 0 -20px; }
+  @media (min-width: 600px) {
+    .single-music .music-details-new {
+      margin: 0 -30px; } }
+  .single-music .music-details-new .music-detail {
+    padding: 0 5px; }
+    .single-music .music-details-new .music-detail .name-title {
+      font-weight: 700; }
+
+.single-music .instructions-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fafafa;
+  background: #5e8f7f;
+  padding: 20px;
+  margin: 0 -20px 30px;
+  border-bottom: 10px solid #8d785e; }
+  @media (min-width: 600px) {
+    .single-music .instructions-wrapper {
+      padding: 30px; } }
+  @media (min-width: 600px) {
+    .single-music .instructions-wrapper {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      margin: 0 -30px 30px; } }
+  .single-music .instructions-wrapper .instructions {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed #fafafa; }
+    @media (min-width: 600px) {
+      .single-music .instructions-wrapper .instructions {
+        margin: 0;
+        border-bottom: none; } }
+  .single-music .instructions-wrapper .sheet-music {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-item-align: stretch;
+    align-self: stretch; }
+    @media (min-width: 600px) {
+      .single-music .instructions-wrapper .sheet-music {
+        padding-left: 30px;
+        margin-left: 30px;
+        border-left: 2px dashed #fafafa; } }
+    .single-music .instructions-wrapper .sheet-music h2 {
+      text-align: center; }
+    .single-music .instructions-wrapper .sheet-music .link-wrapper {
+      text-align: center; }
+      .single-music .instructions-wrapper .sheet-music .link-wrapper a {
+        display: inline-block;
+        color: #fafafa;
+        font-weight: 700;
+        padding: 30px; }
+        .single-music .instructions-wrapper .sheet-music .link-wrapper a:hover, .single-music .instructions-wrapper .sheet-music .link-wrapper a:focus {
+          -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          transform: scale(1.2); }
+        .single-music .instructions-wrapper .sheet-music .link-wrapper a span {
+          display: block;
+          font-size: 5em; }
+    .single-music .instructions-wrapper .sheet-music .copyright {
+      background: #79a798;
+      font-size: .9em;
+      font-weight: 600;
+      line-height: 1.2;
+      padding: 5px 15px 15px;
+      border-radius: 10px; }
+      .single-music .instructions-wrapper .sheet-music .copyright p {
+        margin-bottom: 0; }
+
+.single-music .audio-recordings-wrapper {
+  margin: 0 auto 50px;
+  max-width: 600px; }
+  .single-music .audio-recordings-wrapper h2 {
+    border-bottom: 2px solid #5e8f7f; }
+  .single-music .audio-recordings-wrapper .audio-recordings-list {
+    list-style: none;
+    padding: 0; }
+    .single-music .audio-recordings-wrapper .audio-recordings-list li {
+      padding: 0 15px 15px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #e1e1e1; }
+      .single-music .audio-recordings-wrapper .audio-recordings-list li:last-of-type {
+        border-bottom: none; }
+    .single-music .audio-recordings-wrapper .audio-recordings-list .wp-audio-shortcode {
+      margin: 0 0 5px; }
+    .single-music .audio-recordings-wrapper .audio-recordings-list .download-link span {
+      padding: 0 5px; }

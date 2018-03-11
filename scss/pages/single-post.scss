@@ -2,21 +2,27 @@
 
 .single {
   .content {
-    border: 2px solid darken($color-tertiary, 10%);
+    border-top: 2px solid darken($color-tertiary, 10%);
+    border-bottom: 2px solid darken($color-tertiary, 10%);
+    @include mq($breakpoint-primary) {border: 2px solid darken($color-tertiary, 10%);}
   }
 
   .entry-header {
     text-align: center;
     .entry-title {
+      font-size: 2.5rem;
       padding: 0 $whitespace-standard;
-      margin: 0 auto;
+      margin: 0 auto 5px;
       max-width: 800px;
-      border-bottom: 5px solid $color-primary;
+      line-height: 1.2;
+      border-bottom: 3px solid $color-primary;
+      @include mq($breakpoint-primary) {font-size: 3.5rem;}
+      @include mq($breakpoint-secondary) {font-size: 4rem;}
     }
     .entry-meta {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       border-top: none;
-      line-height: 2;
+      line-height: 1.35;
     }
   }
 }
